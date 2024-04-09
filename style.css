@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: 25vw 75vw;
    background-color:#181515;
-    height: 750px;
+    height: 800px;
     width: 100%;
 }
 
@@ -130,9 +130,10 @@ align-items: center;
     
 }
 
-.head h2{
+ .para{
     font-weight: 100;
     font-style: italic;
+    font-size: 30px;
 }
 .head h2 :hover {
    border-bottom:blue
@@ -458,3 +459,51 @@ align-items: center;
     } 
     
  }
+    @media (max-width: 450px) {
+        .rightbox{
+            height: 190vh;
+        }
+        .bottom{
+            margin-top: 100px;
+        }
+        .bottom h2{
+            width: 300px;
+            height: 100px;
+        }
+        .bottom h2 img{
+        font-size: 100px;
+        }
+        .box2{
+            height: 415vw;
+        }
+        .leftbox{
+            width: 100vw;
+        }
+        .songList{
+            width: 85vw;
+        }
+        .songList li{
+            width: 75vw;
+        }
+        .cards{
+            width: 275px;
+            height: 350px;
+        }
+        .cards p{
+            font-size: 30px;
+        }
+        .cards img{
+            width: 260px;
+            height: 270px;
+        }
+        .head{
+            width: 65vw;
+        }
+        .para {
+            font-size: 35px;
+        }
+        .playbar{
+            top: 577px;
+            left: 120px;
+        }
+    }
