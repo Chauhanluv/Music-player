@@ -130,7 +130,7 @@ align-items: center;
     
 }
 
- .para{
+ .para1{
     font-weight: 100;
     font-style: italic;
     font-size: 30px;
@@ -490,7 +490,7 @@ align-items: center;
             height: 350px;
         }
         .cards p{
-            font-size: 30px;
+            font-size: 34px;
         }
         .cards img{
             width: 260px;
@@ -499,7 +499,7 @@ align-items: center;
         .head{
             width: 65vw;
         }
-        .para {
+        .para1{
             font-size: 35px;
         }
         .playbar{
