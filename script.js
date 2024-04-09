@@ -80,7 +80,7 @@ async function getSongs() {
         
             <div class="info">
             
-            ${song}
+            ${song.split('/').slice(-1)}
             </div>
             <div class="playnow">
              <img src="./img/play.svg" alt="">
