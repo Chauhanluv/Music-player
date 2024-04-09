@@ -1,4 +1,4 @@
-let folder = "songs/";
+let folder = "https://github.com/Chauhanluv/Music-player/blob/main/songs/";
 let currentSong = new Audio();
 let songs;
 let currFolder;
