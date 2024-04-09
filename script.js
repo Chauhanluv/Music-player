@@ -64,7 +64,7 @@ async function getSongs() {
             for (let index = 0; index < as.length; index++) {
                 const element = as[index];
                 if (element.href.endsWith(".mp3")) {
-                    let link1= "https://github.com/Chauhanluv/Music-player/blob/f63e614c15fa4444058deb00bbe62969ca6167cc/"+ folder+link+'/'+element.href.split("/").slice(-1);
+                    let link1= "https://github.com/Chauhanluv/Music-player/blob/main/"+ folder+link+'/'+element.href.split("/").slice(-1);
                    
                     songs.push(link1)
                 }
