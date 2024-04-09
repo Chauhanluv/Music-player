@@ -64,7 +64,9 @@ async function getSongs() {
             for (let index = 0; index < as.length; index++) {
                 const element = as[index];
                 if (element.href.endsWith(".mp3")) {
-                    songs.push(element.href.split("/").slice(-1))
+                    let link1= folder+link+'/'+element.href.split("/").slice(-1);
+                   
+                    songs.push(link1)
                 }
 
 
@@ -106,7 +108,7 @@ async function getSongs() {
 
     <div class="info">
     
-    ${song}
+    ${song.split('/').slice(-1)}
     </div>
     <div class="playnow">
      <img src="./img/play.svg" alt="">
