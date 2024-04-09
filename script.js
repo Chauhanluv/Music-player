@@ -1,4 +1,4 @@
-let folder = "http://127.0.0.1:5500/projects.html/spotify.html/public/songs/";
+let folder = "songs/";
 let currentSong = new Audio();
 let songs;
 let currFolder;
