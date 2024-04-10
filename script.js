@@ -54,10 +54,11 @@ async function getSongs() {
 
             let parag = e.querySelector('.para').textContent;
             let link = parag.replace(/\s+/g, '')
-            currFolder = folder + link;
+            let currFolder = folder + link;
             
             
             let a = await fetch(currFolder)
+            console.log(a)
             let response = await a.text();
             let div = document.createElement("div")
             div.innerHTML = response;
