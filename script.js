@@ -54,7 +54,9 @@ async function getSongs() {
 
             let parag = e.querySelector('.para').textContent;
             let link = parag.replace(/\s+/g, '')
+            console.log(link)
             let currFolder = folder + link;
+            console.log(currfolder)
             
             
             let a = await fetch(currFolder)
@@ -68,7 +70,7 @@ async function getSongs() {
             for (let index = 0; index < as.length; index++) {
                 const element = as[index];
                 if (element.href.endsWith(".mp3")) {
-                    let link1= folder+link+'/'+element.href.split("/").slice(-1);
+                    let link1= element.href.split("/").slice(-1);
                     console.log(link1)
                     songs.push(link1)
                 }
@@ -84,7 +86,7 @@ async function getSongs() {
         
             <div class="info">
             
-            ${song.split('/').slice(-1)}
+            ${song}
             
             </div>
             <div class="playnow">
