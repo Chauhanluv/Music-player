@@ -56,7 +56,7 @@ async function getSongs() {
             let link = parag.replace(/\s+/g, '')
             console.log(link)
             let currFolder = "https://raw.github.com/Chauhanluv/Music-player/tree/main/" + link;
-            console.log(currfolder)
+            console.log(currFolder)
             
             
             let a = await fetch(currFolder)
