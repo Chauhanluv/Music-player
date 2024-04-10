@@ -55,7 +55,7 @@ async function getSongs() {
             let parag = e.querySelector('.para').textContent;
             let link = parag.replace(/\s+/g, '')
             console.log(link)
-            let currFolder = "https://raw.github.com/Chauhanluv/Music-player/tree/main/" + link;
+            let currFolder = folder + link;
             console.log(currFolder)
             
             
