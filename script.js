@@ -1,4 +1,5 @@
-let folder = "https://raw.github.com/Chauhanluv/Music-player/main/songs/;
+let folder = "songs/";
+
 let currentSong = new Audio();
 let songs;
 let currFolder;
@@ -38,6 +39,7 @@ async function getSongs() {
     let div = document.createElement("div")
     div.innerHTML = response;
     let as = div.getElementsByTagName("a")
+   
     songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
@@ -53,7 +55,8 @@ async function getSongs() {
             let parag = e.querySelector('.para').textContent;
             let link = parag.replace(/\s+/g, '')
             currFolder = folder + link;
-            console.log(currFolder)
+            
+            
             let a = await fetch(currFolder)
             let response = await a.text();
             let div = document.createElement("div")
@@ -65,13 +68,13 @@ async function getSongs() {
                 const element = as[index];
                 if (element.href.endsWith(".mp3")) {
                     let link1= folder+link+'/'+element.href.split("/").slice(-1);
-                   
+                    console.log(link1)
                     songs.push(link1)
                 }
 
-
+                
             }
-            // console.log(songs)
+            console.log(songs)
              let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
             songUL.innerHTML = ""
             for (const song of songs) {
@@ -81,6 +84,7 @@ async function getSongs() {
             <div class="info">
             
             ${song.split('/').slice(-1)}
+            
             </div>
             <div class="playnow">
              <img src="./img/play.svg" alt="">
@@ -88,6 +92,7 @@ async function getSongs() {
         
            </div>
          </li>`;
+         
             
           }
          
@@ -108,7 +113,7 @@ async function getSongs() {
 
     <div class="info">
     
-    ${song.split('/').slice(-1)}
+    ${song}
     </div>
     <div class="playnow">
      <img src="./img/play.svg" alt="">
