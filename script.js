@@ -1,4 +1,4 @@
-let folder = "tree/main/songs/";
+let folder = "https://raw.github.com/Chauhanluv/Music-player/main/songs/;
 let currentSong = new Audio();
 let songs;
 let currFolder;
