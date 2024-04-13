@@ -33,29 +33,14 @@ const playMusic = (track, pause = false) => {
 }
 
 async function getSongs() {
-    currFolder = folder;
-    let a = await fetch(`${folder}`)
-    let response = await a.text();
-    let div = document.createElement("div")
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a")
-   
-    songs = []
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1])
-        }
-    }
+  
 
  Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
     e.addEventListener("click", element => {
         playMusic(e.querySelector(".info").textContent.trim())
  })
 })
-  
-    return songs
-}
+  }
 getSongs()
      
 
