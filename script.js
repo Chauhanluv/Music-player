@@ -105,34 +105,18 @@ async function getSongs() {
     
             })
         })
-        })
-        })
+     })
+    })
 
-    let songsUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
-    songsUL.innerHTML = ""
-    for (const song of songs) {
-        songsUL.innerHTML = songsUL.innerHTML + `<li>
-   <div class="playn">
-
-    <div class="info">
-    
-    ${song}
-    </div>
-    <div class="playnow">
-     <img src="./img/play.svg" alt="">
-   </div>
-
-   </div>
- </li>`;
-    }
+  
     
  Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
     e.addEventListener("click", element => {
         playMusic(e.querySelector(".info").textContent.trim())
-
-    
  })
 })
+
+    
     return songs
 }
 getSongs()
