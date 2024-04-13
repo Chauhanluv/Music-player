@@ -74,30 +74,13 @@ async function getSongs() {
                     console.log(link1)
                     songs.push(link1)
                 }
+            }
 
                 
-            }
             console.log(songs)
-             let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
-            songUL.innerHTML = ""
-            for (const song of songs) {
-                songUL.innerHTML = songUL.innerHTML + `<li>
-           <div class="playn">
-        
-            <div class="info">
             
-            ${song}
-            
-            </div>
-            <div class="playnow">
-             <img src="./img/play.svg" alt="">
-           </div>
-        
-           </div>
-         </li>`;
          
             
-          }
          
             Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
             e.addEventListener("click", element => {
