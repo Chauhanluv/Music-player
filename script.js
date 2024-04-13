@@ -48,61 +48,21 @@ async function getSongs() {
         }
     }
 
-    Array.from(document.querySelectorAll('.cards')).forEach(e => {
-        e.addEventListener('click', async () => {
-
-
-            let parag = e.querySelector('.para').textContent;
-            let link = parag.replace(/\s+/g, '')
-            console.log(link)
-            let currFolder = folder + link;
-            console.log(currFolder)
-            
-            
-            let a = await fetch(currFolder)
-            console.log(a)
-            let response = await a.text();
-            let div = document.createElement("div")
-            div.innerHTML = response;
-            let as = div.getElementsByTagName("a")
-            songs = []
-
-            for (let index = 0; index < as.length; index++) {
-                const element = as[index];
-                if (element.href.endsWith(".mp3")) {
-                    let link1= element.href.split("/").slice(-1);
-                    console.log(link1)
-                    songs.push(link1)
-                }
-            }
-
-                
-            console.log(songs)
-            
-         
-            
-         
-            Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
-            e.addEventListener("click", element => {
-                playMusic(`${link}/`+e.querySelector(".info").textContent.trim())
-    
-            })
-        })
-     })
-    })
-
-  
-    
  Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
     e.addEventListener("click", element => {
         playMusic(e.querySelector(".info").textContent.trim())
  })
 })
-
-    
+  
     return songs
 }
 getSongs()
+     
+
+  
+    
+
+    
 
 
 async function main() {
