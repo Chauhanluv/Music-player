@@ -343,7 +343,7 @@ align-items: center;
         display: none;
        position: absolute;
        background-color: #3c2828;
-       
+       z-index:1;
        height: 690px;
     }
     .songList  li{
@@ -477,6 +477,9 @@ align-items: center;
     
  }
      @media (max-width: 450px) {
+         .above h2 img{
+             margin-right:122px;
+         }
        
         .box2{
             width: 100vw;
