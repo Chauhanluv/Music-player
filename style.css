@@ -7,17 +7,17 @@
     display: grid;
     grid-template-columns: 25vw 75vw;
    background-color:#181515;
-    height: 800px;
+   
     width: 100%;
+    height: 100vh;
 }
 
  .leftbox{
-    /* border: 2px solid red; */
     color: whitesmoke;
      padding: 20px,20px;
      display: grid;
      grid-template-rows: 170px 500px;
-     background-color:#3c2828;
+     background-color:#3c2828
      
 }
  .leftbox h2{
@@ -79,7 +79,6 @@
     height: 40px;
     width: 70px;
     display: flex;
-    /* margin-top: 10px; */
     align-items: center;
     justify-content: center;
 }
@@ -118,7 +117,6 @@ align-items: center;
     align-items: center;
 }
 .head{
-    /* border: 2px solid red; */
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -141,10 +139,9 @@ align-items: center;
  .body{
      display: flex;
     flex-wrap: wrap;
-    width: 76vw;
+    width: 75vw;
 }
 .cards{  
-    /* background-color:#3c2828; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,7 +160,6 @@ align-items: center;
 .cards:hover{
     background-color: rgb(105, 103, 103);
     cursor: pointer;
-    --a: 1;
 }
 .songList{
     
@@ -196,9 +192,8 @@ align-items: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    /* height: 50vh; */
     color: whitesmoke;
-    position: absolute;
     bottom: 0;
     width: 75vw;
     
@@ -241,7 +236,6 @@ align-items: center;
         border-radius: 10px;
         
     bottom: 8px;
-    /* margin: 6px; */
     cursor: pointer;
     margin-top: 21px;
 }
@@ -258,8 +252,11 @@ align-items: center;
 }
 .above h2 img{
     display: none;
+
     
  }
+
+
 
 @media (max-width: 1448px) {
     
@@ -271,14 +268,14 @@ align-items: center;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 180px;
+        width: 200px;
         height: 213px;
     }
    
 .body{
     flex-wrap: wrap;
     width: 74vw;
-    height: 150vh;
+    
 }
 .playbar{
     width: 74vw;
@@ -318,23 +315,36 @@ align-items: center;
         grid-template-columns: 36vw 98vw;
         background-color: #181515;
         width: 100vw;
+        height: 100vh;
         
     }
+    .body {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        height: 64%;
+    
+}
+   
     .bottom{
-        width: 28vw;
-        background-color:#3c2828;
+        margin-top: 27px;
+        height: 340px;
+        
+        padding: 0px 19px;
+        width: 84%;
     }
     .above{
         width: 37vw;
         background-color: #3c2828;
     }
     .leftbox{
-        width: 37vw;
+        border-radius: 20px;
+        width: 38vw;
         display: none;
        position: absolute;
        background-color: #3c2828;
-       z-index: 10;
-       height: 170vh;
+       
+       height: 690px;
     }
     .songList  li{
         width: 29vw;
@@ -351,23 +361,24 @@ align-items: center;
     }
    
     .rightbox{
-        width:100vw;
-        margin: 10px;
-        position: relative;
+        width: 100vw;
+       
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       justify-content: center;
     }
     .nav h4{
         display: none;
     }
     .head{
-    width: 50vw;
-    margin: auto;
+    width: 220px;
     }
     .body{
         width: 100vw;
     }
     .playbar{
         width:100vw;
-        margin-top: 50vh;
     }
     .above h2 img{
         width: 25px;
@@ -377,52 +388,55 @@ align-items: center;
     }
     
     
-}
-
-@media (max-width: 600px) {
     .above h2 img{
-        width: 25px;
+        width: 40px;
         margin-left: 200px;
         display: block;
         
     }
-    
+}
+
+@media (max-width: 600px) {
     .box2{
-        width: 168vw;
-        height: 250vw;
+        height: 100vh;
+        width: 100vw;
     }
+    .body{
+        overflow-y: scroll;
+        height: 100%;
+    }
+    
+    
     .svg{
         display: flex;
         flex-direction: column;
-        height: 25vw;
+        height: 20vw;
     }
     .nav{
-        width: 137vw;
+        width: 82vw;
     }
     .playbar{
         
-        height: 41vw;
+        height: 200px;
         background-color: #3c2828;
         width: 100vw;
-        left: 148px;
+       
         border-radius: 17px;
         position: absolute;
-        top: 428px;
-        z-index: 4;
+        
+        
 
         
     }
     .rightbox{
-        height: 230vh;
-        width: 164vw;
-        position: relative;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     
        
     }
-    .body{
-        width: 164vw;
-        height: 78vh;
-    }
+   
     .cards{
         width: 200px;
         height: 240px;
@@ -433,77 +447,92 @@ align-items: center;
         height: 200px;
     }
     .leftbox{
-        width: 72vw;
-        height: 180vh;
+        width: 60vw;
+        height: 62%;
         position: absolute;
         z-index: 2;
         background-color: #3c2828;
         display: none;
+        border-radius: 11px
     }
     .bottom {
         background-color: #3c2828;
-        height: 113vh;
-        width: 58vw;
+        
+        width: 50vw;
+        overflow-y: scroll;
+        border-radius: 20px;
     }
     .above {
-        width: 72vw;
+        width: 50vw;
         background-color: #3c2828;
     }
     
    
     .songList {
-        width: 60vw;
+        width: 50vw;
     }
     .songList li{
-        width: 60vw;
+        width: 50vw;
     } 
     
  }
-    @media (max-width: 450px) {
-        .rightbox{
-            height: 190vh;
+     @media (max-width: 450px) {
+       
+        .box2{
+            width: 100vw;
+            height: 100vh;
         }
-        .bottom{
-            margin-top: 100px;
+        .nav{
+            width:73vw;
+        }
+       
+         .bottom{
+            margin-top: 27px;
+            height: 340px;
+            overflow-y: scroll;
+            padding: 0px 19px;
+            width: 60vw;
+            border-radius: 20px;
         }
         .bottom h2{
             width: 300px;
-            height: 100px;
-        }
-        .bottom h2 img{
+            height: 58px;
+        } 
+         .bottom h2 img{
         font-size: 100px;
-        }
-        .box2{
-            height: 415vw;
-        }
+        } 
+         
         .leftbox{
-            width: 100vw;
+            width: 70vw;
+            height: 60%;
         }
         .songList{
-            width: 85vw;
-        }
-        .songList li{
-            width: 75vw;
-        }
-        .cards{
-            width: 275px;
-            height: 350px;
-        }
-        .cards p{
-            font-size: 34px;
-        }
-        .cards img{
-            width: 260px;
-            height: 270px;
-        }
-        .head{
             width: 65vw;
         }
-        .para1{
+        .songList li{
+            width: 54vw;
+        }
+        .cards{
+            width: 129px;
+            height: 224px;
+        }
+        .cards p{
+            font-size: 17px;
+        }
+        .cards img{
+            width: 128px;
+            height: 200px;
+        }
+        .head{
+            width: 200px;
+        }
+        .head p{
+            font-size: 20px;
+        }
+        .para1 {
             font-size: 35px;
         }
         .playbar{
-            top: 577px;
-            left: 120px;
+         position: fixed;
         }
-    }
+    } 
