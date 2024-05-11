@@ -275,6 +275,7 @@ align-items: center;
 .body{
     flex-wrap: wrap;
     width: 74vw;
+    overflow-y: scroll;
     
 }
 .playbar{
@@ -323,6 +324,7 @@ align-items: center;
         display: flex;
         justify-content: center;
         height: 64%;
+        overflow-y: scroll;
     
 }
    
@@ -343,8 +345,9 @@ align-items: center;
         display: none;
        position: absolute;
        background-color: #3c2828;
-       z-index:1;
+       
        height: 690px;
+       z-index: 1;
     }
     .songList  li{
         width: 29vw;
@@ -367,6 +370,7 @@ align-items: center;
        align-items: center;
        flex-direction: column;
        justify-content: center;
+       height: 100vh;
     }
     .nav h4{
         display: none;
@@ -404,6 +408,7 @@ align-items: center;
     .body{
         overflow-y: scroll;
         height: 100%;
+        margin-bottom: 200px;
     }
     
     
@@ -420,16 +425,17 @@ align-items: center;
         height: 200px;
         background-color: #3c2828;
         width: 100vw;
-       
+        
         border-radius: 17px;
         position: absolute;
         
         
-
+        
         
     }
     .rightbox{
         width: 100vw;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -477,9 +483,22 @@ align-items: center;
     
  }
      @media (max-width: 450px) {
-         .above h2 img{
-             margin-right:122px;
-         }
+        .above h2 img{
+            width: 30px;
+            margin-left: 140px;
+        }
+        .rightbox{
+            height: 80vh;
+        }
+        .body{
+            overflow-y: scroll;
+            height: 80vh;
+            display: flex;
+            flex: wrap;
+            /* align-items: center; */
+            justify-content: center;
+            margin-bottom: 0;
+        }
        
         .box2{
             width: 100vw;
@@ -506,14 +525,14 @@ align-items: center;
         } 
          
         .leftbox{
-            width: 70vw;
+            width: 75vw;
             height: 60%;
         }
         .songList{
-            width: 65vw;
+            width: 68vw;
         }
         .songList li{
-            width: 54vw;
+            width: 58vw;
         }
         .cards{
             width: 129px;
@@ -537,5 +556,10 @@ align-items: center;
         }
         .playbar{
          position: fixed;
+        }
+        .svg{
+            display: flex;
+            flex-direction: column;
+            height: 117px;
         }
     } 
